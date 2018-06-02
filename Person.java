@@ -3,8 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package day3;
+package day4;
 
+/**
+ *
+ * @author macstudent
+ */
 import java.util.Scanner;
 
 /**
