@@ -3,72 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package day4;
-
-import java.util.Scanner;
+package Serialization;
 
 /**
  *
  * @author macstudent
  */
-public class Employee extends Person
+public class Employee implements java.io.Serializable
 {
-    String eID;
-    String joiningDate;
-    int DeptNo;
+    public String name;
+    public String address;
+    public int SSN; //public transit int SSN means not going to store in byte class
+    public int number;
     
-    Scanner sc1=new Scanner(System.in);
-
-    public Employee() 
+    public void mailCheque()
     {
-        super();
-        this.eID = "E###";
-        this.joiningDate = "DD MON YYYY";
-        this.DeptNo = 0;
-    }
-
-    public Employee(String name,String address,int age,String eID, String joiningDate, int DeptNo)
-    {
-        super(name,address,age);
-        this.eID = eID;
-        this.joiningDate = joiningDate;
-        this.DeptNo = DeptNo;
+        System.out.println("Mailing a cheque to " + name
+                            + " " + address);
     }
     
-    @Override
-    public String toString()
-    {
-        
-        String personaldetails=super.toString();
-        String data="\n Employee Id : " + eID + " \n Joining Date : " + this.joiningDate + "\n Dept No : " + this.DeptNo;
-        
-        return personaldetails+data;
-    }
-
-    public void setID(String eID) 
-    {
-        this.eID = eID;
-        System.out.println("Enter Employee Id:");
-    }
-
-    public String getID() 
-    {
-        return this.eID;
-    }
-
-    public void setJoiningDate(String joiningDate)
-    {
-        this.joiningDate = joiningDate;
-    }
-
-    public void setDeptNo(int DeptNo) 
-    {
-        this.DeptNo = DeptNo;
-    }
-
-    public int getDeptNo() 
-    {
-        return DeptNo;
-    }
-
 }
